@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="sg.edu.nus.iss.ft08.phoenix">
+
+  <!-- To auto-complete the email text field in the login form with the user's emails -->
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.READ_PROFILE"/>
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+  <!-- To call REST API -->
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <user-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".authenticate.LoginActivity"
+        android:label="@string/title_activity_login">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".MainActivity"
+        android:label="@string/title_activity_main"
+        android:theme="@style/AppTheme.NoActionBar"/>
+    <activity
+        android:name=".radioprogram.RadioProgramsActivity"
+        android:label="@string/title_activity_radio_programs"
+        android:theme="@style/AppTheme.NoActionBar"/>
+    <activity
+        android:name=".schedule.SchedulesActivity"
+        android:label="@string/title_activity_schedules"
+        android:theme="@style/AppTheme.NoActionBar"/>
+    <activity
+        android:name=".user.UsersActivity"
+        android:label="@string/title_activity_users"
+        android:theme="@style/AppTheme.NoActionBar"/>
+    <activity
+        android:name=".radioprogram.RadioProgramDetailActivity"
+        android:label="@string/title_activity_radio_program_detail"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name=".schedule.ScheduleProgramDetailActivity"
+        android:label="Schedule program Detail"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name=".user.UserDetailActivity"
+        android:label="@string/title_activity_user_detail"
+        android:theme="@style/AppTheme.NoActionBar"/>
+    <activity
+        android:name=".schedule.UserSchedulesActivity"
+        android:label="User Schedules"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name=".schedule.RadioProgramSchedulesActivity"
+        android:label="Radio Program Schedules"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name=".user.MyProfileActivity"
+        android:label="My Profile"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+  </application>
+
+</manifest>
